@@ -1,0 +1,216 @@
+06-Aug-2023 22:55:09:467 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbycdvxcm1trxf2rllxoezsujmtutloegvpu2q1thnkc6fupwxvz2luo3rpznkgefgwtejnmuncuklpukhszi1yutzxrmlkbfbtnlrjwfkjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=qmfeaklpbu9iyu5xyjnxbxrrzhphdhnuv2rleejuaf9qauxkstjgbdfgqq%3d%3d&code_challenge=si8xarixuets4pbvhelt3xvo4jgu5yxor5hkapvctg4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:55:11:358 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: email] 
+06-Aug-2023 22:55:13:267 INFO  [main] 1. Successfully launched kyro website 
+06-Aug-2023 22:55:13:283 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbycdvxcm1trxf2rllxoezsujmtutloegvpu2q1thnkc6fupwxvz2luo3rpznkgefgwtejnmuncuklpukhszi1yutzxrmlkbfbtnlrjwfkjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=qmfeaklpbu9iyu5xyjnxbxrrzhphdhnuv2rleejuaf9qauxkstjgbdfgqq%3d%3d&code_challenge=si8xarixuets4pbvhelt3xvo4jgu5yxor5hkapvctg4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:55:13:300 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbycdvxcm1trxf2rllxoezsujmtutloegvpu2q1thnkc6fupwxvz2luo3rpznkgefgwtejnmuncuklpukhszi1yutzxrmlkbfbtnlrjwfkjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=qmfeaklpbu9iyu5xyjnxbxrrzhphdhnuv2rleejuaf9qauxkstjgbdfgqq%3d%3d&code_challenge=si8xarixuets4pbvhelt3xvo4jgu5yxor5hkapvctg4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:55:13:490 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: email] 
+06-Aug-2023 22:55:13:704 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: email] 
+06-Aug-2023 22:55:15:088 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: password] 
+06-Aug-2023 22:55:15:292 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: password] 
+06-Aug-2023 22:55:15:691 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbycdvxcm1trxf2rllxoezsujmtutloegvpu2q1thnkc6fupwxvz2luo3rpznkgefgwtejnmuncuklpukhszi1yutzxrmlkbfbtnlrjwfkjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=qmfeaklpbu9iyu5xyjnxbxrrzhphdhnuv2rleejuaf9qauxkstjgbdfgqq%3d%3d&code_challenge=si8xarixuets4pbvhelt3xvo4jgu5yxor5hkapvctg4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:55:15:874 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: submit] 
+06-Aug-2023 22:55:16:060 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: submit] 
+06-Aug-2023 22:55:16:216 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbycdvxcm1trxf2rllxoezsujmtutloegvpu2q1thnkc6fupwxvz2luo3rpznkgefgwtejnmuncuklpukhszi1yutzxrmlkbfbtnlrjwfkjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=qmfeaklpbu9iyu5xyjnxbxrrzhphdhnuv2rleejuaf9qauxkstjgbdfgqq%3d%3d&code_challenge=si8xarixuets4pbvhelt3xvo4jgu5yxor5hkapvctg4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:55:22:354 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:55:23:970 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:55:23:988 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:55:24:177 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:55:24:208 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:55:30:236 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:55:30:436 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:55:30:458 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:55:30:671 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:55:31:482 INFO  [main] 2. Successfully logged in the application with project manager credentials 
+06-Aug-2023 22:55:31:511 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:55:31:740 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]//button] 
+06-Aug-2023 22:55:31:946 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]//button] 
+06-Aug-2023 22:55:33:141 INFO  [main] 3. Clicke on Create Project button 
+06-Aug-2023 22:55:33:421 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //label/span[contains(text(),'Mark as Public')]] 
+06-Aug-2023 22:55:33:749 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //label/span[contains(text(),'Mark as Public')]] 
+06-Aug-2023 22:55:34:618 INFO  [main] 4. Clicke on Mark as public checkbox 
+06-Aug-2023 22:55:34:836 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //button[contains(text(),'Next')]] 
+06-Aug-2023 22:55:35:061 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //button[contains(text(),'Next')]] 
+06-Aug-2023 22:55:36:626 INFO  [main] 5. Clicke on Next button 
+06-Aug-2023 22:55:36:843 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: project_name] 
+06-Aug-2023 22:55:37:045 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: project_name] 
+06-Aug-2023 22:55:39:240 INFO  [main] 6. Entered project name 
+06-Aug-2023 22:55:39:512 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> id: project-manager] 
+06-Aug-2023 22:55:40:016 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> id: project-manager] 
+06-Aug-2023 22:55:44:253 INFO  [main] 7. Selected project manager 
+06-Aug-2023 22:55:44:577 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: project_number] 
+06-Aug-2023 22:55:44:760 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: project_number] 
+06-Aug-2023 22:55:45:792 INFO  [main] 8. Entered billing code 
+06-Aug-2023 22:55:45:991 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //textarea[@name='description']] 
+06-Aug-2023 22:55:46:186 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //textarea[@name='description']] 
+06-Aug-2023 22:55:47:981 INFO  [main] 9. Entered description 
+06-Aug-2023 22:55:48:167 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //button[contains(text(),'Submit')]] 
+06-Aug-2023 22:55:48:387 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //button[contains(text(),'Submit')]] 
+06-Aug-2023 22:55:48:732 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:55:48:916 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div] 
+06-Aug-2023 22:55:49:377 INFO  [main] 10. Clicke on Submit button 
+06-Aug-2023 22:55:52:093 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main//h3] 
+06-Aug-2023 22:55:53:479 INFO  [main] 11. Project created and assigned successfully 
+06-Aug-2023 22:55:53:715 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[1]//input] 
+06-Aug-2023 22:55:54:312 INFO  [main] 12. Project manager name is displayed as expected 
+06-Aug-2023 22:55:54:517 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[2]//input] 
+06-Aug-2023 22:55:55:274 INFO  [main] 13. Billing code is displayed as expected 
+06-Aug-2023 22:56:00:593 INFO  [main] Unable to find a element after 0 sec ==> [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[3]//input] 
+06-Aug-2023 22:56:01:612 INFO  [main] 14. Project status is displayed as expected 
+06-Aug-2023 22:56:01:627 INFO  [main] Page URL:: https://stage.kyro.ai/projects/64d087658ded156b7c80fb30 
+06-Aug-2023 22:56:01:807 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[2]/div] 
+06-Aug-2023 22:56:01:994 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[2]/div] 
+06-Aug-2023 22:56:03:478 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //div[contains(text(),'Logout')]] 
+06-Aug-2023 22:56:03:681 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //div[contains(text(),'Logout')]] 
+06-Aug-2023 22:56:10:899 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbovzzys2xut2xpzu5tb3phcnq2zufic25lwgjsa1cxr6fupwxvz2luo3rpznkgshdwv1kzogtjsmjoymhnm010q0dxy3hjr2lmcfhkwvajy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=wnz3dxzime8yrxbbvedisen5u2tkzwjldxnyqvhkvna2uxnnt3bstufxqg%3d%3d&code_challenge=i4zzgxxi5z1ir8ryt3lihe6m20yedlhzvb4vzt6fhhm&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:56:12:715 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: email] 
+06-Aug-2023 22:56:13:492 INFO  [main] 15. Successfully logged out the application 
+06-Aug-2023 22:56:13:511 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbovzzys2xut2xpzu5tb3phcnq2zufic25lwgjsa1cxr6fupwxvz2luo3rpznkgshdwv1kzogtjsmjoymhnm010q0dxy3hjr2lmcfhkwvajy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=wnz3dxzime8yrxbbvedisen5u2tkzwjldxnyqvhkvna2uxnnt3bstufxqg%3d%3d&code_challenge=i4zzgxxi5z1ir8ryt3lihe6m20yedlhzvb4vzt6fhhm&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:56:13:525 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbovzzys2xut2xpzu5tb3phcnq2zufic25lwgjsa1cxr6fupwxvz2luo3rpznkgshdwv1kzogtjsmjoymhnm010q0dxy3hjr2lmcfhkwvajy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=wnz3dxzime8yrxbbvedisen5u2tkzwjldxnyqvhkvna2uxnnt3bstufxqg%3d%3d&code_challenge=i4zzgxxi5z1ir8ryt3lihe6m20yedlhzvb4vzt6fhhm&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:56:13:701 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: email] 
+06-Aug-2023 22:56:13:874 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: email] 
+06-Aug-2023 22:56:14:653 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: password] 
+06-Aug-2023 22:56:14:816 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: password] 
+06-Aug-2023 22:56:15:156 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbovzzys2xut2xpzu5tb3phcnq2zufic25lwgjsa1cxr6fupwxvz2luo3rpznkgshdwv1kzogtjsmjoymhnm010q0dxy3hjr2lmcfhkwvajy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=wnz3dxzime8yrxbbvedisen5u2tkzwjldxnyqvhkvna2uxnnt3bstufxqg%3d%3d&code_challenge=i4zzgxxi5z1ir8ryt3lihe6m20yedlhzvb4vzt6fhhm&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:56:15:344 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: submit] 
+06-Aug-2023 22:56:15:533 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: submit] 
+06-Aug-2023 22:56:15:698 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbovzzys2xut2xpzu5tb3phcnq2zufic25lwgjsa1cxr6fupwxvz2luo3rpznkgshdwv1kzogtjsmjoymhnm010q0dxy3hjr2lmcfhkwvajy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=wnz3dxzime8yrxbbvedisen5u2tkzwjldxnyqvhkvna2uxnnt3bstufxqg%3d%3d&code_challenge=i4zzgxxi5z1ir8ryt3lihe6m20yedlhzvb4vzt6fhhm&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:56:21:748 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:56:21:996 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:56:22:407 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:56:22:617 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:56:22:650 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:56:28:698 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:56:28:881 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:56:28:895 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:56:29:083 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:56:29:706 INFO  [main] 16. Successfully logged in the application with invited user's credentials 
+06-Aug-2023 22:56:29:722 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:56:29:892 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[1]/span] 
+06-Aug-2023 22:56:30:519 INFO  [main] 17. Notification count is greater than 0 
+06-Aug-2023 22:56:30:537 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:56:30:710 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[1]/span] 
+06-Aug-2023 22:56:30:977 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[1]/span] 
+06-Aug-2023 22:56:34:450 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //div[@data-test-id='notification-content']/../div[contains(text(),'QAE_Test_Project_lhTIZ')]] 
+06-Aug-2023 22:56:37:590 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[1]/span] 
+06-Aug-2023 22:56:37:759 INFO  [main] Page URL:: https://stage.kyro.ai/projects/64d087658ded156b7c80fb30 
+06-Aug-2023 22:56:39:207 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div] 
+06-Aug-2023 22:56:39:653 INFO  [main] 18. Clicked the notification and successfully redirected to the project details page 
+06-Aug-2023 22:56:39:828 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main//h3] 
+06-Aug-2023 22:56:40:275 INFO  [main] 19. Project name is displayed as expected in the project details page 
+06-Aug-2023 22:56:40:458 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[1]//input] 
+06-Aug-2023 22:56:40:888 INFO  [main] 20. Project manager name is displayed as expected in the project details page 
+06-Aug-2023 22:56:41:069 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[2]//input] 
+06-Aug-2023 22:56:41:640 INFO  [main] 21. Billing code is displayed as expected in the project details page 
+06-Aug-2023 22:56:47:021 INFO  [main] Unable to find a element after 0 sec ==> [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[3]//input] 
+06-Aug-2023 22:56:47:478 INFO  [main] 22. Project status is displayed as expected in the project details page 
+06-Aug-2023 22:56:47:479 INFO  [main] ****             -E---N---D-             ***** 
+06-Aug-2023 22:57:06:424 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbbntfxu2rvm2nxtnr1ynv0vhzivnnczxbasjnvaep4yqfupwxvz2luo3rpznkgr1j2mnr2chhxxzfsaelrqmdhvddtejaxlum0n2jpd3wjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=tmvxenk4othoc3zyzujou1pvwjzkagq5zffly2h6rhywq1pazlraqnnmaw%3d%3d&code_challenge=gbl4_pgkdl2wpfngb8pqcyepkzb0wyzckedigrddrlc&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:57:07:212 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: email] 
+06-Aug-2023 22:57:07:985 INFO  [main] 1. Successfully launched kyro website 
+06-Aug-2023 22:57:08:001 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbbntfxu2rvm2nxtnr1ynv0vhzivnnczxbasjnvaep4yqfupwxvz2luo3rpznkgr1j2mnr2chhxxzfsaelrqmdhvddtejaxlum0n2jpd3wjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=tmvxenk4othoc3zyzujou1pvwjzkagq5zffly2h6rhywq1pazlraqnnmaw%3d%3d&code_challenge=gbl4_pgkdl2wpfngb8pqcyepkzb0wyzckedigrddrlc&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:57:08:016 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbbntfxu2rvm2nxtnr1ynv0vhzivnnczxbasjnvaep4yqfupwxvz2luo3rpznkgr1j2mnr2chhxxzfsaelrqmdhvddtejaxlum0n2jpd3wjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=tmvxenk4othoc3zyzujou1pvwjzkagq5zffly2h6rhywq1pazlraqnnmaw%3d%3d&code_challenge=gbl4_pgkdl2wpfngb8pqcyepkzb0wyzckedigrddrlc&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:57:08:195 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: email] 
+06-Aug-2023 22:57:08:382 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: email] 
+06-Aug-2023 22:57:09:139 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: password] 
+06-Aug-2023 22:57:09:310 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: password] 
+06-Aug-2023 22:57:09:701 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbbntfxu2rvm2nxtnr1ynv0vhzivnnczxbasjnvaep4yqfupwxvz2luo3rpznkgr1j2mnr2chhxxzfsaelrqmdhvddtejaxlum0n2jpd3wjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=tmvxenk4othoc3zyzujou1pvwjzkagq5zffly2h6rhywq1pazlraqnnmaw%3d%3d&code_challenge=gbl4_pgkdl2wpfngb8pqcyepkzb0wyzckedigrddrlc&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:57:09:888 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: submit] 
+06-Aug-2023 22:57:10:096 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: submit] 
+06-Aug-2023 22:57:10:246 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbbntfxu2rvm2nxtnr1ynv0vhzivnnczxbasjnvaep4yqfupwxvz2luo3rpznkgr1j2mnr2chhxxzfsaelrqmdhvddtejaxlum0n2jpd3wjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=tmvxenk4othoc3zyzujou1pvwjzkagq5zffly2h6rhywq1pazlraqnnmaw%3d%3d&code_challenge=gbl4_pgkdl2wpfngb8pqcyepkzb0wyzckedigrddrlc&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:57:16:281 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:57:16:506 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:57:16:526 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:57:16:746 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:57:16:763 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:57:22:787 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:57:22:969 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:57:22:983 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:57:23:157 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:57:23:725 INFO  [main] 2. Successfully logged in the application with project manager credentials 
+06-Aug-2023 22:57:23:741 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:57:23:943 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //header/div/div/div[2]//button] 
+06-Aug-2023 22:57:24:167 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //header/div/div/div[2]//button] 
+06-Aug-2023 22:57:25:342 INFO  [main] 3. Clicke on Create Project button 
+06-Aug-2023 22:57:25:500 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //label/span[contains(text(),'Mark as Public')]] 
+06-Aug-2023 22:57:25:712 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //label/span[contains(text(),'Mark as Public')]] 
+06-Aug-2023 22:57:26:452 INFO  [main] 4. Clicke on Mark as public checkbox 
+06-Aug-2023 22:57:26:642 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //button[contains(text(),'Next')]] 
+06-Aug-2023 22:57:26:849 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //button[contains(text(),'Next')]] 
+06-Aug-2023 22:57:27:749 INFO  [main] 5. Clicke on Next button 
+06-Aug-2023 22:57:27:995 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: project_name] 
+06-Aug-2023 22:57:28:265 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: project_name] 
+06-Aug-2023 22:57:30:465 INFO  [main] 6. Entered project name 
+06-Aug-2023 22:57:30:646 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: project_number] 
+06-Aug-2023 22:57:30:963 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: project_number] 
+06-Aug-2023 22:57:32:152 INFO  [main] 7. Entered billing code 
+06-Aug-2023 22:57:32:402 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //textarea[@name='description']] 
+06-Aug-2023 22:57:32:601 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //textarea[@name='description']] 
+06-Aug-2023 22:57:34:717 INFO  [main] 8. Entered description 
+06-Aug-2023 22:57:34:906 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //button[contains(text(),'Submit')]] 
+06-Aug-2023 22:57:35:080 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //button[contains(text(),'Submit')]] 
+06-Aug-2023 22:57:35:381 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:57:35:588 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //main/div/div/div/div[2]/div[1]/div] 
+06-Aug-2023 22:57:38:539 INFO  [main] 9. Clicke on Submit button 
+06-Aug-2023 22:57:40:201 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //main//h3] 
+06-Aug-2023 22:57:43:456 INFO  [main] 10. Project created and assigned successfully 
+06-Aug-2023 22:57:43:708 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[1]//input] 
+06-Aug-2023 22:57:44:380 INFO  [main] 11. Project manager name is displayed as expected 
+06-Aug-2023 22:57:44:580 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[2]//input] 
+06-Aug-2023 22:57:45:323 INFO  [main] 12. Billing code is displayed as expected 
+06-Aug-2023 22:57:50:632 INFO  [main] Unable to find a element after 0 sec ==> [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[3]//input] 
+06-Aug-2023 22:57:51:160 INFO  [main] 13. Project status is displayed as expected 
+06-Aug-2023 22:57:51:177 INFO  [main] Page URL:: https://stage.kyro.ai/projects/64d087cfc7076ba8f35e8934 
+06-Aug-2023 22:57:51:387 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[1]/span] 
+06-Aug-2023 22:57:51:990 INFO  [main] 14. Notification is not triggered when assigning the project to the same user 
+06-Aug-2023 22:57:51:990 INFO  [main] ****             -E---N---D-             ***** 
+06-Aug-2023 22:58:10:630 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2saxyuz2d1l1mhjiddiys3hushpvovhurgjrtkrqsktsqafupwxvz2luo3rpznkgqwxkuexsnffwotnrexfozu0xakpilurjywtrczdkss2jy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=amrhres2ny41txvrxzjdqvpsalnvamd0rwhuz2nndkx1nurmqkh1egnxza%3d%3d&code_challenge=mpudjshudochvnqb7v_yrzvk1hsxesbcgjcmzphzcl4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:58:12:087 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: email] 
+06-Aug-2023 22:58:12:895 INFO  [main] 1. Successfully launched kyro website 
+06-Aug-2023 22:58:12:910 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2saxyuz2d1l1mhjiddiys3hushpvovhurgjrtkrqsktsqafupwxvz2luo3rpznkgqwxkuexsnffwotnrexfozu0xakpilurjywtrczdkss2jy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=amrhres2ny41txvrxzjdqvpsalnvamd0rwhuz2nndkx1nurmqkh1egnxza%3d%3d&code_challenge=mpudjshudochvnqb7v_yrzvk1hsxesbcgjcmzphzcl4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:58:12:924 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2saxyuz2d1l1mhjiddiys3hushpvovhurgjrtkrqsktsqafupwxvz2luo3rpznkgqwxkuexsnffwotnrexfozu0xakpilurjywtrczdkss2jy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=amrhres2ny41txvrxzjdqvpsalnvamd0rwhuz2nndkx1nurmqkh1egnxza%3d%3d&code_challenge=mpudjshudochvnqb7v_yrzvk1hsxesbcgjcmzphzcl4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:58:13:096 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: email] 
+06-Aug-2023 22:58:13:269 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: email] 
+06-Aug-2023 22:58:14:030 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: password] 
+06-Aug-2023 22:58:14:203 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: password] 
+06-Aug-2023 22:58:14:541 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2saxyuz2d1l1mhjiddiys3hushpvovhurgjrtkrqsktsqafupwxvz2luo3rpznkgqwxkuexsnffwotnrexfozu0xakpilurjywtrczdkss2jy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=amrhres2ny41txvrxzjdqvpsalnvamd0rwhuz2nndkx1nurmqkh1egnxza%3d%3d&code_challenge=mpudjshudochvnqb7v_yrzvk1hsxesbcgjcmzphzcl4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:58:14:738 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: submit] 
+06-Aug-2023 22:58:14:945 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: submit] 
+06-Aug-2023 22:58:15:083 INFO  [main] Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2saxyuz2d1l1mhjiddiys3hushpvovhurgjrtkrqsktsqafupwxvz2luo3rpznkgqwxkuexsnffwotnrexfozu0xakpilurjywtrczdkss2jy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=amrhres2ny41txvrxzjdqvpsalnvamd0rwhuz2nndkx1nurmqkh1egnxza%3d%3d&code_challenge=mpudjshudochvnqb7v_yrzvk1hsxesbcgjcmzphzcl4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d 
+06-Aug-2023 22:58:21:139 INFO  [main] Page URL:: https://stage.kyro.ai/?code=lqvavtmborvd-wzvers5hpxvqerik7hfvxmluqjnkm3gf&state=wc42u1rulmjgaxzrv2fos3hyatdyqtvids44rgnzykvvdkdqslvflvfzcg%3d%3d 
+06-Aug-2023 22:58:23:540 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:58:23:555 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:58:23:729 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:58:23:746 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:58:29:772 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:58:29:957 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:58:29:971 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:58:30:145 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //h2[contains(text(),'Welcome')]] 
+06-Aug-2023 22:58:30:637 INFO  [main] 2. Successfully logged in the application with project manager credentials 
+06-Aug-2023 22:58:30:650 INFO  [main] Page URL:: https://stage.kyro.ai/ 
+06-Aug-2023 22:58:30:837 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //header/div/div/div[2]//button] 
+06-Aug-2023 22:58:31:014 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //header/div/div/div[2]//button] 
+06-Aug-2023 22:58:32:554 INFO  [main] 3. Clicke on Create Project button 
+06-Aug-2023 22:58:33:102 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //label/span[contains(text(),'Mark as Public')]] 
+06-Aug-2023 22:58:35:169 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //label/span[contains(text(),'Mark as Public')]] 
+06-Aug-2023 22:58:37:015 INFO  [main] 4. Clicke on Mark as public checkbox 
+06-Aug-2023 22:58:37:228 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //button[contains(text(),'Next')]] 
+06-Aug-2023 22:58:37:433 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //button[contains(text(),'Next')]] 
+06-Aug-2023 22:58:38:516 INFO  [main] 5. Clicke on Next button 
+06-Aug-2023 22:58:39:035 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: project_name] 
+06-Aug-2023 22:58:39:347 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: project_name] 
+06-Aug-2023 22:58:41:099 INFO  [main] 6. Entered project name 
+06-Aug-2023 22:58:41:319 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> id: project-manager] 
+06-Aug-2023 22:58:41:522 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> id: project-manager] 
+06-Aug-2023 22:58:46:101 INFO  [main] 7. Selected project manager 
+06-Aug-2023 22:58:46:295 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: project_number] 
+06-Aug-2023 22:58:46:501 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: project_number] 
+06-Aug-2023 22:58:47:958 INFO  [main] 8. Entered billing code 
+06-Aug-2023 22:58:48:163 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //textarea[@name='description']] 
+06-Aug-2023 22:58:48:542 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //textarea[@name='description']] 
+06-Aug-2023 22:58:50:773 INFO  [main] 9. Entered description 
+06-Aug-2023 22:58:50:997 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //button[contains(text(),'Submit')]] 
+06-Aug-2023 22:58:51:199 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //button[contains(text(),'Submit')]] 
+06-Aug-2023 22:58:52:776 INFO  [main] 10. Clicke on Submit button 
+06-Aug-2023 22:58:54:592 INFO  [main] Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //div/h6[contains(text(),'Project Name already exists')]] 
+06-Aug-2023 22:58:55:331 INFO  [main] 11. Project Already Exist error message is displayed 
+06-Aug-2023 22:58:55:331 INFO  [main] ****             -E---N---D-             ***** 

@@ -1,0 +1,1614 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+			ExtentReports Library 2.41.1 | http://relevantcodes.com/extentreports-for-selenium/ | https://github.com/anshooarora/
+			Copyright (c) 2015, Anshoo Arora (Relevant Codes) | Copyrights licensed under the New BSD License | http://opensource.org/licenses/BSD-3-Clause
+			Documentation: http://extentreports.relevantcodes.com 
+		-->
+
+		<meta charset='UTF-8' /> 
+		<meta name='description' content='ExtentReports (by Anshoo Arora) is a reporting library for automation testing for .NET and Java. It creates detailed and beautiful HTML reports for modern browsers. ExtentReports shows test and step summary along with dashboards, system and environment details for quick analysis of your tests.' />
+		<meta name='robots' content='noodp, noydir' />
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<meta name='extentx' id='extentx' content='' />
+		
+		<title>
+				ExtentReports 2.0
+		</title>
+		
+		
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports/6032d73243ba4fe4fb8769eb9c315d4fdf16fe68/cdn/extent.css' type='text/css' rel='stylesheet' />
+		
+		<style>
+				
+            
+                
+            
+        
+		</style>
+	</head>
+	
+	
+	<body class='extent default standard hide-overflow'>
+		<!-- nav -->
+		<nav>
+			<div class='logo-container blue darken-2'>
+				<a class='logo-content' href='http://extentreports.relevantcodes.com'>
+					<span>ExtentReports</span>
+				</a>
+				<a href='#' data-activates='slide-out' class='button-collapse hide-on-large-only'><i class='mdi-navigation-apps'></i></a>
+			</div>
+			<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+				<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
+				<li class='analysis waves-effect'>
+					<a href='#!' onclick="_updateCurrentStage(-1)" class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a>
+				</li>
+			</ul>
+			<span class='report-name'>Automation Report</span> <span class='report-headline'></span>
+			<ul class='right hide-on-med-and-down nav-right'>
+				<li class='theme-selector' alt='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");' title='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");'>
+					<i class='mdi-hardware-desktop-windows'></i>
+				</li>
+				<li>
+					<span class='suite-started-time'>2023-08-06 22:58:55</span>
+				</li>
+				<li>
+					<span>v2.41.1</span>
+				</li>
+			</ul>
+		</nav>
+		<!-- /nav -->
+		
+		<!-- container -->
+		<div class='container'>
+			
+			<!-- dashboard -->
+			<div id='dashboard-view' class='row'>
+				<div class='time-totals'>
+					<div class='col l2 m4 s6'>
+						<div class='card suite-total-tests'> 
+							<span class='panel-name'>Total Tests</span> 
+							<span class='total-tests'> <span class='panel-lead'></span> </span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s6'>
+						<div class='card suite-total-steps'> 
+							<span class='panel-name'>Total Steps</span> 
+							<span class='total-steps'> <span class='panel-lead'></span> </span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s12'>
+						<div class='card suite-total-time-current'> 
+							<span class='panel-name'>Total Time Taken (Current Run)</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 3m 45s+572ms</span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s12'>
+						<div class='card suite-total-time-overall'> 
+							<span class='panel-name'>Total Time Taken (Overall)</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 3m 45s+572ms</span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s6 suite-start-time'>
+						<div class='card accent green-accent'> 
+							<span class='panel-name'>Start</span> 
+							<span class='panel-lead suite-started-time'>2023-08-06 22:55:09</span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s6 suite-end-time'>
+						<div class='card accent pink-accent'> 
+							<span class='panel-name'>End</span> 
+							<span class='panel-lead suite-ended-time'>2023-08-06 22:58:55</span> 
+						</div> 
+					</div>
+				</div>
+				<div class='charts'>
+					<div class='col s12 m6 l4 fh'> 
+						<div class='card-panel'> 
+							<div>
+								<span class='panel-name'>Tests View</span>
+							</div> 
+							<div class='panel-setting modal-trigger test-count-setting right'>
+								<a href='#test-count-setting'><i class='mdi-navigation-more-vert text-md'></i></a>
+							</div> 
+							<div class='chart-box'>
+								<canvas class='text-centered' id='test-analysis'></canvas>
+							</div> 
+							<div>
+								<span class='weight-light'><span class='t-pass-count weight-normal'></span> test(s) passed</span>
+							</div> 
+							<div>
+								<span class='weight-light'><span class='t-fail-count weight-normal'></span> test(s) failed, <span class='t-others-count weight-normal'></span> others</span>
+							</div> 
+						</div> 
+					</div> 
+					<div class='col s12 m6 l4 fh'> 
+						<div class='card-panel'> 
+							<div>
+								<span class='panel-name'>Steps View</span>
+							</div> 
+							<div class='panel-setting modal-trigger step-status-filter right'>
+								<a href='#step-status-filter'><i class='mdi-navigation-more-vert text-md'></i></a>
+							</div> 
+							<div class='chart-box'>
+								<canvas class='text-centered' id='step-analysis'></canvas>
+							</div> 
+							<div>
+								<span class='weight-light'><span class='s-pass-count weight-normal'></span> step(s) passed </span>
+							</div> 
+							<div>
+								<span class='weight-light'><span class='s-fail-count weight-normal'></span> step(s) failed, <span class='s-others-count weight-normal'></span> others</span>
+							</div> 
+						</div> 
+					</div>
+					<div class='col s12 m12 l4 fh'> 
+						<div class='card-panel'> 
+							<span class='panel-name'>Pass Percentage</span> 
+							<span class='pass-percentage panel-lead'></span> 
+							<div class='progress light-blue lighten-3'> 
+								<div class='determinate light-blue'></div> 
+							</div> 
+						</div> 
+					</div>
+				</div>
+				<div class='system-view'>
+					<div class='col l4 m12 s12'>
+						<div class='card-panel'>
+							<span class='label info outline right'>Environment</span>
+							<table>
+								<thead>
+									<tr>
+										<th>Param</th>
+										<th>Value</th>
+									</tr>
+								</thead>
+								<tbody>
+										<tr>
+											<td>User Name</td>
+											<td>Selva</td>
+										</tr>
+										<tr>
+											<td>OS</td>
+											<td>Windows 10</td>
+										</tr>
+										<tr>
+											<td>Java Version</td>
+											<td>1.8.0_202</td>
+										</tr>
+										<tr>
+											<td>Host Name</td>
+											<td>DESKTOP-FCMJ0C3</td>
+										</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /dashboard -->
+			
+			<!-- tests -->
+			<div id='test-view' class='row _addedTable'>
+				<div class='col _addedCell1'>
+					<div class='contents'>
+						<div class='card-panel heading'>
+							<h5>Tests</h5>
+						</div>
+						<div class='card-panel filters'>
+							<div>
+								<a class='dropdown-button btn-floating btn-small waves-effect waves-light grey tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+									<i class='mdi-action-reorder'></i>
+								</a>
+								<ul id='tests-toggle' class='dropdown-content'>
+									<li class='pass'><a href='#!'>Pass</a></li>
+									<li class='fail'><a href='#!'>Fail</a></li>
+									<li class='skip'><a href='#!'>Skip</a></li>
+										<li class='unknown'><a href='#!'>Unknown</a></li>
+									<li class='divider'></li>
+									<li class='clear'><a href='#!'>Clear Filters</a></li>
+								</ul>
+							</div>
+							<div>
+								<a class='btn-floating btn-small waves-effect waves-light grey' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+									<i class='mdi-navigation-close'></i>
+								</a>
+							</div>
+							<div>
+								<a class='btn-floating btn-small waves-effect waves-light grey' id='enableDashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+									<i class='mdi-action-track-changes'></i>
+								</a>
+							</div>
+							<div>
+								<a class='btn-floating btn-small waves-effect waves-light blue enabled' id='refreshCharts' alt='Refresh Charts on Filters' title='Refresh Charts on Filters'>
+									<i class='mdi-navigation-refresh'></i>
+								</a>
+							</div>
+							<div class='search' alt='Search Tests' title='Search Tests'>
+								<div class='input-field left'>
+									<input id='searchTests' type='text' class='validate' placeholder='Search Tests...'>
+								</div>
+								<a href="#" class='btn-floating btn-small waves-effect waves-light grey'>
+									<i class='mdi-action-search'></i>
+								</a>
+							</div>
+						</div>
+						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
+							<div class='wrapper'>
+								<ul id='test-collection' class='test-collection'>
+										<li class='collection-item test displayed active unknown ' extentid='e22ea8ab-13df-4bb3-8313-d803d9e8d8a4'>
+											<div class='test-head'>
+												<span class='test-name'>KYRO QAE Assignment Test Report </span>
+												<span class='test-status label right outline capitalize unknown'>unknown</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-08-06 22:55:10</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-08-06 22:56:47</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 36s+622ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='d6c28bb0-8f36-4bd3-a812-843c1e3c0ea0'>
+											<div class='test-head'>
+												<span class='test-name'>testscripts.NotificationExperienceTest#NotificationTest_01 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-08-06 22:55:10</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-08-06 22:56:47</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 36s+618ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:10</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbycdvxcm1trxf2rllxoezsujmtutloegvpu2q1thnkc6fupwxvz2luo3rpznkgefgwtejnmuncuklpukhszi1yutzxrmlkbfbtnlrjwfkjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=qmfeaklpbu9iyu5xyjnxbxrrzhphdhnuv2rleejuaf9qauxkstjgbdfgqq%3d%3d&code_challenge=si8xarixuets4pbvhelt3xvo4jgu5yxor5hkapvctg4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:11</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: email]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:13</td>
+																	<td class='step-details'>1. Successfully launched kyro website <a href=".\ScreenShot\NotificationTest_01_1.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:13</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbycdvxcm1trxf2rllxoezsujmtutloegvpu2q1thnkc6fupwxvz2luo3rpznkgefgwtejnmuncuklpukhszi1yutzxrmlkbfbtnlrjwfkjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=qmfeaklpbu9iyu5xyjnxbxrrzhphdhnuv2rleejuaf9qauxkstjgbdfgqq%3d%3d&code_challenge=si8xarixuets4pbvhelt3xvo4jgu5yxor5hkapvctg4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:13</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbycdvxcm1trxf2rllxoezsujmtutloegvpu2q1thnkc6fupwxvz2luo3rpznkgefgwtejnmuncuklpukhszi1yutzxrmlkbfbtnlrjwfkjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=qmfeaklpbu9iyu5xyjnxbxrrzhphdhnuv2rleejuaf9qauxkstjgbdfgqq%3d%3d&code_challenge=si8xarixuets4pbvhelt3xvo4jgu5yxor5hkapvctg4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:13</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: email]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:13</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: email]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:15</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: password]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:15</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: password]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:15</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbycdvxcm1trxf2rllxoezsujmtutloegvpu2q1thnkc6fupwxvz2luo3rpznkgefgwtejnmuncuklpukhszi1yutzxrmlkbfbtnlrjwfkjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=qmfeaklpbu9iyu5xyjnxbxrrzhphdhnuv2rleejuaf9qauxkstjgbdfgqq%3d%3d&code_challenge=si8xarixuets4pbvhelt3xvo4jgu5yxor5hkapvctg4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:15</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: submit]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:16</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: submit]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:16</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbycdvxcm1trxf2rllxoezsujmtutloegvpu2q1thnkc6fupwxvz2luo3rpznkgefgwtejnmuncuklpukhszi1yutzxrmlkbfbtnlrjwfkjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=qmfeaklpbu9iyu5xyjnxbxrrzhphdhnuv2rleejuaf9qauxkstjgbdfgqq%3d%3d&code_challenge=si8xarixuets4pbvhelt3xvo4jgu5yxor5hkapvctg4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:22</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:23</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:23</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:24</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:24</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:30</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:30</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:30</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:30</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:31</td>
+																	<td class='step-details'>2. Successfully logged in the application with project manager credentials <a href=".\ScreenShot\NotificationTest_01_2.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:31</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:31</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]//button]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:31</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]//button]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:33</td>
+																	<td class='step-details'>3. Clicke on Create Project button <a href=".\ScreenShot\NotificationTest_01_3.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:33</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //label/span[contains(text(),'Mark as Public')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:33</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //label/span[contains(text(),'Mark as Public')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:34</td>
+																	<td class='step-details'>4. Clicke on Mark as public checkbox <a href=".\ScreenShot\NotificationTest_01_4.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:34</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //button[contains(text(),'Next')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:35</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //button[contains(text(),'Next')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:36</td>
+																	<td class='step-details'>5. Clicke on Next button <a href=".\ScreenShot\NotificationTest_01_5.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:36</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: project_name]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:37</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: project_name]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:39</td>
+																	<td class='step-details'>6. Entered project name <a href=".\ScreenShot\NotificationTest_01_6.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:39</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> id: project-manager]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:40</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> id: project-manager]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:44</td>
+																	<td class='step-details'>7. Selected project manager <a href=".\ScreenShot\NotificationTest_01_7.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:44</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: project_number]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:44</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: project_number]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:45</td>
+																	<td class='step-details'>8. Entered billing code <a href=".\ScreenShot\NotificationTest_01_8.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:45</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //textarea[@name='description']]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:46</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //textarea[@name='description']]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:47</td>
+																	<td class='step-details'>9. Entered description <a href=".\ScreenShot\NotificationTest_01_9.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:48</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //button[contains(text(),'Submit')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:48</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //button[contains(text(),'Submit')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:48</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:48</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:49</td>
+																	<td class='step-details'>10. Clicke on Submit button <a href=".\ScreenShot\NotificationTest_01_10.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:52</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main//h3]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:53</td>
+																	<td class='step-details'>11. Project created and assigned successfully <a href=".\ScreenShot\NotificationTest_01_11.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:55:53</td>
+																	<td class='step-details'><font color="green">11. Project created and assigned successfully</font></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:53</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[1]//input]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:54</td>
+																	<td class='step-details'>12. Project manager name is displayed as expected <a href=".\ScreenShot\NotificationTest_01_12.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:55:54</td>
+																	<td class='step-details'><font color="green">12. Project manager name is displayed as expected</font></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:54</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[2]//input]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:55:55</td>
+																	<td class='step-details'>13. Billing code is displayed as expected <a href=".\ScreenShot\NotificationTest_01_13.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:55:55</td>
+																	<td class='step-details'><font color="green">13. Billing code is displayed as expected</font></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:00</td>
+																	<td class='step-details'>Unable to find a element after 0 sec ==> [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[3]//input]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:01</td>
+																	<td class='step-details'>14. Project status is displayed as expected <a href=".\ScreenShot\NotificationTest_01_14.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:56:01</td>
+																	<td class='step-details'><font color="green">14. Project status is displayed as expected</font></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:01</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/projects/64d087658ded156b7c80fb30</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:01</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[2]/div]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:01</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[2]/div]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:03</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //div[contains(text(),'Logout')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:03</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //div[contains(text(),'Logout')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:10</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbovzzys2xut2xpzu5tb3phcnq2zufic25lwgjsa1cxr6fupwxvz2luo3rpznkgshdwv1kzogtjsmjoymhnm010q0dxy3hjr2lmcfhkwvajy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=wnz3dxzime8yrxbbvedisen5u2tkzwjldxnyqvhkvna2uxnnt3bstufxqg%3d%3d&code_challenge=i4zzgxxi5z1ir8ryt3lihe6m20yedlhzvb4vzt6fhhm&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:12</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: email]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:13</td>
+																	<td class='step-details'>15. Successfully logged out the application <a href=".\ScreenShot\NotificationTest_01_15.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:13</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbovzzys2xut2xpzu5tb3phcnq2zufic25lwgjsa1cxr6fupwxvz2luo3rpznkgshdwv1kzogtjsmjoymhnm010q0dxy3hjr2lmcfhkwvajy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=wnz3dxzime8yrxbbvedisen5u2tkzwjldxnyqvhkvna2uxnnt3bstufxqg%3d%3d&code_challenge=i4zzgxxi5z1ir8ryt3lihe6m20yedlhzvb4vzt6fhhm&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:13</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbovzzys2xut2xpzu5tb3phcnq2zufic25lwgjsa1cxr6fupwxvz2luo3rpznkgshdwv1kzogtjsmjoymhnm010q0dxy3hjr2lmcfhkwvajy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=wnz3dxzime8yrxbbvedisen5u2tkzwjldxnyqvhkvna2uxnnt3bstufxqg%3d%3d&code_challenge=i4zzgxxi5z1ir8ryt3lihe6m20yedlhzvb4vzt6fhhm&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:13</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: email]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:13</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: email]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:14</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: password]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:14</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: password]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:15</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbovzzys2xut2xpzu5tb3phcnq2zufic25lwgjsa1cxr6fupwxvz2luo3rpznkgshdwv1kzogtjsmjoymhnm010q0dxy3hjr2lmcfhkwvajy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=wnz3dxzime8yrxbbvedisen5u2tkzwjldxnyqvhkvna2uxnnt3bstufxqg%3d%3d&code_challenge=i4zzgxxi5z1ir8ryt3lihe6m20yedlhzvb4vzt6fhhm&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:15</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: submit]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:15</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> name: submit]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:15</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbovzzys2xut2xpzu5tb3phcnq2zufic25lwgjsa1cxr6fupwxvz2luo3rpznkgshdwv1kzogtjsmjoymhnm010q0dxy3hjr2lmcfhkwvajy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=wnz3dxzime8yrxbbvedisen5u2tkzwjldxnyqvhkvna2uxnnt3bstufxqg%3d%3d&code_challenge=i4zzgxxi5z1ir8ryt3lihe6m20yedlhzvb4vzt6fhhm&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:21</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:21</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:22</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:22</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:22</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:28</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:28</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:28</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:29</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:29</td>
+																	<td class='step-details'>16. Successfully logged in the application with invited user's credentials <a href=".\ScreenShot\NotificationTest_01_16.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:29</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:29</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[1]/span]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:30</td>
+																	<td class='step-details'>17. Notification count is greater than 0 <a href=".\ScreenShot\NotificationTest_01_17.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:56:30</td>
+																	<td class='step-details'><font color="green">17. Notification count is greater than 0</font></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:30</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:30</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[1]/span]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:30</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[1]/span]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:34</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //div[@data-test-id='notification-content']/../div[contains(text(),'QAE_Test_Project_lhTIZ')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:37</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[1]/span]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:37</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/projects/64d087658ded156b7c80fb30</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:39</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:39</td>
+																	<td class='step-details'>18. Clicked the notification and successfully redirected to the project details page <a href=".\ScreenShot\NotificationTest_01_18.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:39</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main//h3]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:40</td>
+																	<td class='step-details'>19. Project name is displayed as expected in the project details page <a href=".\ScreenShot\NotificationTest_01_19.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:56:40</td>
+																	<td class='step-details'><font color="green">19. Project name is displayed as expected in the project details page</font></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:40</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[1]//input]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:40</td>
+																	<td class='step-details'>20. Project manager name is displayed as expected in the project details page <a href=".\ScreenShot\NotificationTest_01_20.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:56:40</td>
+																	<td class='step-details'><font color="green">20. Project manager name is displayed as expected in the project details page</font></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:41</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[2]//input]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:41</td>
+																	<td class='step-details'>21. Billing code is displayed as expected in the project details page <a href=".\ScreenShot\NotificationTest_01_21.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:56:41</td>
+																	<td class='step-details'><font color="green">21. Billing code is displayed as expected in the project details page</font></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:47</td>
+																	<td class='step-details'>Unable to find a element after 0 sec ==> [[ChromeDriver: chrome on WINDOWS (65f68ddd658b6033a43677d164ff8896)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[3]//input]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:56:47</td>
+																	<td class='step-details'>22. Project status is displayed as expected in the project details page <a href=".\ScreenShot\NotificationTest_01_22.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:56:47</td>
+																	<td class='step-details'><font color="green">22. Project status is displayed as expected in the project details page</font></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='3dcf8bc7-5456-41a7-9848-e932640906dd'>
+											<div class='test-head'>
+												<span class='test-name'>testscripts.NotificationExperienceTest#NotificationTest_02 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-08-06 22:57:06</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-08-06 22:57:51</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 45s+567ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:06</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbbntfxu2rvm2nxtnr1ynv0vhzivnnczxbasjnvaep4yqfupwxvz2luo3rpznkgr1j2mnr2chhxxzfsaelrqmdhvddtejaxlum0n2jpd3wjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=tmvxenk4othoc3zyzujou1pvwjzkagq5zffly2h6rhywq1pazlraqnnmaw%3d%3d&code_challenge=gbl4_pgkdl2wpfngb8pqcyepkzb0wyzckedigrddrlc&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:07</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: email]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:07</td>
+																	<td class='step-details'>1. Successfully launched kyro website <a href=".\ScreenShot\NotificationTest_02_23.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:08</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbbntfxu2rvm2nxtnr1ynv0vhzivnnczxbasjnvaep4yqfupwxvz2luo3rpznkgr1j2mnr2chhxxzfsaelrqmdhvddtejaxlum0n2jpd3wjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=tmvxenk4othoc3zyzujou1pvwjzkagq5zffly2h6rhywq1pazlraqnnmaw%3d%3d&code_challenge=gbl4_pgkdl2wpfngb8pqcyepkzb0wyzckedigrddrlc&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:08</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbbntfxu2rvm2nxtnr1ynv0vhzivnnczxbasjnvaep4yqfupwxvz2luo3rpznkgr1j2mnr2chhxxzfsaelrqmdhvddtejaxlum0n2jpd3wjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=tmvxenk4othoc3zyzujou1pvwjzkagq5zffly2h6rhywq1pazlraqnnmaw%3d%3d&code_challenge=gbl4_pgkdl2wpfngb8pqcyepkzb0wyzckedigrddrlc&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:08</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: email]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:08</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: email]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:09</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: password]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:09</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: password]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:09</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbbntfxu2rvm2nxtnr1ynv0vhzivnnczxbasjnvaep4yqfupwxvz2luo3rpznkgr1j2mnr2chhxxzfsaelrqmdhvddtejaxlum0n2jpd3wjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=tmvxenk4othoc3zyzujou1pvwjzkagq5zffly2h6rhywq1pazlraqnnmaw%3d%3d&code_challenge=gbl4_pgkdl2wpfngb8pqcyepkzb0wyzckedigrddrlc&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:09</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: submit]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:10</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: submit]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:10</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2sbbntfxu2rvm2nxtnr1ynv0vhzivnnczxbasjnvaep4yqfupwxvz2luo3rpznkgr1j2mnr2chhxxzfsaelrqmdhvddtejaxlum0n2jpd3wjy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=tmvxenk4othoc3zyzujou1pvwjzkagq5zffly2h6rhywq1pazlraqnnmaw%3d%3d&code_challenge=gbl4_pgkdl2wpfngb8pqcyepkzb0wyzckedigrddrlc&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:16</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:16</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:16</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:16</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:16</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:22</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:22</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:22</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:23</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:23</td>
+																	<td class='step-details'>2. Successfully logged in the application with project manager credentials <a href=".\ScreenShot\NotificationTest_02_24.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:23</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:23</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //header/div/div/div[2]//button]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:24</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //header/div/div/div[2]//button]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:25</td>
+																	<td class='step-details'>3. Clicke on Create Project button <a href=".\ScreenShot\NotificationTest_02_25.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:25</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //label/span[contains(text(),'Mark as Public')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:25</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //label/span[contains(text(),'Mark as Public')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:26</td>
+																	<td class='step-details'>4. Clicke on Mark as public checkbox <a href=".\ScreenShot\NotificationTest_02_26.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:26</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //button[contains(text(),'Next')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:26</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //button[contains(text(),'Next')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:27</td>
+																	<td class='step-details'>5. Clicke on Next button <a href=".\ScreenShot\NotificationTest_02_27.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:27</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: project_name]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:28</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: project_name]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:30</td>
+																	<td class='step-details'>6. Entered project name <a href=".\ScreenShot\NotificationTest_02_28.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:30</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: project_number]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:30</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> name: project_number]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:32</td>
+																	<td class='step-details'>7. Entered billing code <a href=".\ScreenShot\NotificationTest_02_29.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:32</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //textarea[@name='description']]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:32</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //textarea[@name='description']]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:34</td>
+																	<td class='step-details'>8. Entered description <a href=".\ScreenShot\NotificationTest_02_30.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:34</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //button[contains(text(),'Submit')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:35</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //button[contains(text(),'Submit')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:35</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:35</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //main/div/div/div/div[2]/div[1]/div]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:38</td>
+																	<td class='step-details'>9. Clicke on Submit button <a href=".\ScreenShot\NotificationTest_02_31.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:40</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //main//h3]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:43</td>
+																	<td class='step-details'>10. Project created and assigned successfully <a href=".\ScreenShot\NotificationTest_02_32.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:57:43</td>
+																	<td class='step-details'><font color="green">10. Project created and assigned successfully</font></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:43</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[1]//input]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:44</td>
+																	<td class='step-details'>11. Project manager name is displayed as expected <a href=".\ScreenShot\NotificationTest_02_33.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:57:44</td>
+																	<td class='step-details'><font color="green">11. Project manager name is displayed as expected</font></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:44</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[2]//input]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:45</td>
+																	<td class='step-details'>12. Billing code is displayed as expected <a href=".\ScreenShot\NotificationTest_02_34.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:57:45</td>
+																	<td class='step-details'><font color="green">12. Billing code is displayed as expected</font></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:50</td>
+																	<td class='step-details'>Unable to find a element after 0 sec ==> [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //main/div/div/div/div[2]/div[1]/div/div[3]//input]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:51</td>
+																	<td class='step-details'>13. Project status is displayed as expected <a href=".\ScreenShot\NotificationTest_02_35.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:57:51</td>
+																	<td class='step-details'><font color="green">13. Project status is displayed as expected</font></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:51</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/projects/64d087cfc7076ba8f35e8934</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:51</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (ac570ae9d173edb0dc1b1b8096f3d627)] -> xpath: //header/div/div/div[2]/div/div[2]/div[2]/span[1]/span]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:57:51</td>
+																	<td class='step-details'>14. Notification is not triggered when assigning the project to the same user <a href=".\ScreenShot\NotificationTest_02_36.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:57:51</td>
+																	<td class='step-details'><font color="green">14. Notification is not triggered when assigning the project to the same user</font></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='8e0d9e91-e00f-48fd-b8ba-c469593bcb91'>
+											<div class='test-head'>
+												<span class='test-name'>testscripts.NotificationExperienceTest#NotificationTest_03 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-08-06 22:58:10</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-08-06 22:58:55</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 44s+701ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:10</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2saxyuz2d1l1mhjiddiys3hushpvovhurgjrtkrqsktsqafupwxvz2luo3rpznkgqwxkuexsnffwotnrexfozu0xakpilurjywtrczdkss2jy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=amrhres2ny41txvrxzjdqvpsalnvamd0rwhuz2nndkx1nurmqkh1egnxza%3d%3d&code_challenge=mpudjshudochvnqb7v_yrzvk1hsxesbcgjcmzphzcl4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:12</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: email]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:12</td>
+																	<td class='step-details'>1. Successfully launched kyro website <a href=".\ScreenShot\NotificationTest_03_37.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:12</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2saxyuz2d1l1mhjiddiys3hushpvovhurgjrtkrqsktsqafupwxvz2luo3rpznkgqwxkuexsnffwotnrexfozu0xakpilurjywtrczdkss2jy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=amrhres2ny41txvrxzjdqvpsalnvamd0rwhuz2nndkx1nurmqkh1egnxza%3d%3d&code_challenge=mpudjshudochvnqb7v_yrzvk1hsxesbcgjcmzphzcl4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:12</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2saxyuz2d1l1mhjiddiys3hushpvovhurgjrtkrqsktsqafupwxvz2luo3rpznkgqwxkuexsnffwotnrexfozu0xakpilurjywtrczdkss2jy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=amrhres2ny41txvrxzjdqvpsalnvamd0rwhuz2nndkx1nurmqkh1egnxza%3d%3d&code_challenge=mpudjshudochvnqb7v_yrzvk1hsxesbcgjcmzphzcl4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:13</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: email]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:13</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: email]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:14</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: password]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:14</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: password]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:14</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2saxyuz2d1l1mhjiddiys3hushpvovhurgjrtkrqsktsqafupwxvz2luo3rpznkgqwxkuexsnffwotnrexfozu0xakpilurjywtrczdkss2jy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=amrhres2ny41txvrxzjdqvpsalnvamd0rwhuz2nndkx1nurmqkh1egnxza%3d%3d&code_challenge=mpudjshudochvnqb7v_yrzvk1hsxesbcgjcmzphzcl4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:14</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: submit]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:14</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: submit]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:15</td>
+																	<td class='step-details'>Page URL:: https://kyro-stage.us.auth0.com/login?state=hkfo2saxyuz2d1l1mhjiddiys3hushpvovhurgjrtkrqsktsqafupwxvz2luo3rpznkgqwxkuexsnffwotnrexfozu0xakpilurjywtrczdkss2jy2lk2sb4rtz4twvivjj4evv0dnrhtkhoyndwunu1mznnaljsvg&client=xe6xmebv2xyutvtgnhhbwvru533mjrlv&protocol=oauth2&audience=https%3a%2f%2fkyro-user-service-mgmqxruica-uc.a.run.app%2f&redirect_uri=https%3a%2f%2fstage.kyro.ai&scope=openid%20profile%20email%20offline_access&response_type=code&response_mode=query&nonce=amrhres2ny41txvrxzjdqvpsalnvamd0rwhuz2nndkx1nurmqkh1egnxza%3d%3d&code_challenge=mpudjshudochvnqb7v_yrzvk1hsxesbcgjcmzphzcl4&code_challenge_method=s256&auth0client=eyjuyw1lijoiyxv0adatcmvhy3qilcj2zxjzaw9uijoims4xmi4xin0%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:21</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/?code=lqvavtmborvd-wzvers5hpxvqerik7hfvxmluqjnkm3gf&state=wc42u1rulmjgaxzrv2fos3hyatdyqtvids44rgnzykvvdkdqslvflvfzcg%3d%3d</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:23</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:23</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:23</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:23</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:29</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:29</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:29</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:30</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //h2[contains(text(),'Welcome')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:30</td>
+																	<td class='step-details'>2. Successfully logged in the application with project manager credentials <a href=".\ScreenShot\NotificationTest_03_38.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:30</td>
+																	<td class='step-details'>Page URL:: https://stage.kyro.ai/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:30</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //header/div/div/div[2]//button]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:31</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //header/div/div/div[2]//button]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:32</td>
+																	<td class='step-details'>3. Clicke on Create Project button <a href=".\ScreenShot\NotificationTest_03_39.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:33</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //label/span[contains(text(),'Mark as Public')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:35</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //label/span[contains(text(),'Mark as Public')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:37</td>
+																	<td class='step-details'>4. Clicke on Mark as public checkbox <a href=".\ScreenShot\NotificationTest_03_40.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:37</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //button[contains(text(),'Next')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:37</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //button[contains(text(),'Next')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:38</td>
+																	<td class='step-details'>5. Clicke on Next button <a href=".\ScreenShot\NotificationTest_03_41.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:39</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: project_name]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:39</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: project_name]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:41</td>
+																	<td class='step-details'>6. Entered project name <a href=".\ScreenShot\NotificationTest_03_42.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:41</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> id: project-manager]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:41</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> id: project-manager]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:46</td>
+																	<td class='step-details'>7. Selected project manager <a href=".\ScreenShot\NotificationTest_03_43.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:46</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: project_number]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:46</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> name: project_number]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:47</td>
+																	<td class='step-details'>8. Entered billing code <a href=".\ScreenShot\NotificationTest_03_44.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:48</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //textarea[@name='description']]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:48</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //textarea[@name='description']]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:50</td>
+																	<td class='step-details'>9. Entered description <a href=".\ScreenShot\NotificationTest_03_45.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:50</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //button[contains(text(),'Submit')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:51</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //button[contains(text(),'Submit')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:52</td>
+																	<td class='step-details'>10. Clicke on Submit button <a href=".\ScreenShot\NotificationTest_03_46.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:54</td>
+																	<td class='step-details'>Element is displayed:: [[ChromeDriver: chrome on WINDOWS (66e8939f13a0c6b60ed8d4ed48ec797a)] -> xpath: //div/h6[contains(text(),'Project Name already exists')]]</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>22:58:55</td>
+																	<td class='step-details'>11. Project Already Exist error message is displayed <a href=".\ScreenShot\NotificationTest_03_47.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:58:55</td>
+																	<td class='step-details'><font color="green">11. Project Already Exist error message is displayed</font></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id='test-details-wrapper' class='col _addedCell2'>
+					<div class='contents'>
+						<div class='card-panel details-view'>
+							<h5 class='details-name'></h5>
+							<div class='step-filters right'>
+								<span class='btn-floating btn-small waves-effect waves-light blue' status='info' alt='info' title='info'><i class='mdi-action-info-outline'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light green' status='pass' alt='pass' title='pass'><i class='mdi-action-check-circle'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light red' status='fail' alt='fail' title='fail'><i class='mdi-navigation-cancel'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light red darken-4' status='fatal' alt='fatal' title='fatal'><i class='mdi-navigation-cancel'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light red lighten-2' status='error' alt='error' title='error'><i class='mdi-alert-error'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light orange' alt='warning' status='warning' title='warning'><i class='mdi-alert-warning'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light cyan' status='skip' alt='skip' title='skip'><i class='mdi-content-redo'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light grey darken-2' status='clear-step-filter' alt='Clear filters' title='Clear filters'><i class='mdi-content-clear'></i></span>
+							</div>
+							<div class='details-container'>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /tests -->
+			
+			<!-- categories -->
+			<!-- /categories -->
+			
+			<!-- exceptions -->
+			<!-- /exceptions -->
+			
+			<!-- testrunner logs -->
+			<!-- /testrunner logs -->
+			
+		</div>
+		<!-- /container -->
+		
+		<!-- test dashboard counts setting -->
+		<div id='test-count-setting' class='modal bottom-sheet'> 
+			<div class='modal-content'> 
+				<h5>Configure Tests Count Setting</h5> 
+				<input name='test-count-setting' type='radio' id='parentWithoutNodes' class='with-gap'> 
+				<label for='parentWithoutNodes'>Parent Tests Only (Does not include child nodes in counts)</label> 
+				<br> 
+				<input name='test-count-setting' type='radio' id='parentWithoutNodesAndNodes' class='with-gap'> 
+				<label for='parentWithoutNodesAndNodes'>Parent Tests Without Child Tests + Child Tests</label> 
+				<br> 
+				<input name='test-count-setting' type='radio' id='childNodes' class='with-gap'> 
+				<label for='childNodes'>Child Tests Only</label> 
+			</div> 
+			<div class='modal-footer'> 
+				<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+			</div> 
+		</div>
+		<!-- /test dashboard counts setting -->
+		
+		<!-- filter for step status -->
+		<div id='step-status-filter' class='modal bottom-sheet'> 
+			<div class='modal-content'> 
+				<h5>Select status</h5> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-pass'> 
+				<label for='step-dashboard-filter-pass'>Pass</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fail'> 
+				<label for='step-dashboard-filter-fail'>Fail</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fatal'> 
+				<label for='step-dashboard-filter-fatal'>Fatal</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-error'> 
+				<label for='step-dashboard-filter-error'>Error</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-warning'> 
+				<label for='step-dashboard-filter-warning'>Warning</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-skip'> 
+				<label for='step-dashboard-filter-skip'>Skipped</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-info'> 
+				<label for='step-dashboard-filter-info'>Info</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-unknown'> 
+				<label for='step-dashboard-filter-unknown'>Unknown</label> 
+			</div>
+			<div class='modal-footer'> 
+				<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+			</div> 
+		</div>
+		<!-- /filter for step status -->
+		
+		<script src='https://cdn.rawgit.com/anshooarora/extentreports/6032d73243ba4fe4fb8769eb9c315d4fdf16fe68/cdn/extent.js' type='text/javascript'></script>
+
+		<script>$(document).ready(function() { $('.logo span').html('ExtentReports'); });</script>
+		<script>
+				
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
+		</script>
+	</body>
+</html>
